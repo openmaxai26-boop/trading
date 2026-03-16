@@ -196,20 +196,22 @@ class CycleDetector:
         fft_vals = np.abs(np.fft.rfft(detrended))
         freqs = np.fft.rfftfreq(n)
 
-        # Convert to periods, filter to valid range
-        valid_mask = (freqs > 0) & (1 / freqs >= min_period) & (1 / freqs <= max_period)
+        # Convert to periods safely (avoid divide-by-zero at freq=0)
+        with np.errstate(divide="ignore", invalid="ignore"):
+            periods = np.where(freqs > 0, 1.0 / freqs, 0)
+        valid_mask = (freqs > 0) & (periods >= min_period) & (periods <= max_period)
         if not valid_mask.any():
             return []
 
         valid_fft = fft_vals[valid_mask]
-        valid_periods = (1 / freqs[valid_mask]).astype(int)
+        valid_periods = periods[valid_mask].astype(int)
 
         # Find top 3 peaks
         if len(valid_fft) < 3:
-            return list(valid_periods[:3])
+            return [int(p) for p in valid_periods[:3]]
 
         peak_indices = np.argsort(valid_fft)[-3:][::-1]
-        cycles = sorted(set(valid_periods[peak_indices]))
+        cycles = sorted(set(int(p) for p in valid_periods[peak_indices]))
         return cycles
 
     def _fourier_trend_strength(self, price: pd.Series) -> float:
@@ -313,17 +315,14 @@ class CycleDetector:
         if window < 5:
             return 0.5
 
-        # R-squared of linear fit
-        x = np.arange(window)
-        y = price.values[-window:]
+        # R-squared of linear fit — correlation between time index and price
+        x = np.arange(window, dtype=float)
+        y = price.values[-window:].astype(float)
         y = (y - y.mean()) / (y.std() + 1e-10)
-        _, _, r_value, _, _ = np.polyfit(x, y, 1, full=False), *np.zeros(4)
         try:
-            _, _, r_value, _, _ = scipy_signal.periodogram.__module__ and (
-                lambda: (lambda c: (c[0], c[1], np.corrcoef(x, y)[0, 1], 0, 0))(np.polyfit(x, y, 1))
-            )()
+            r_value = float(np.corrcoef(x, y)[0, 1])
         except Exception:
-            r_value = abs(np.corrcoef(x, y)[0, 1]) if len(x) == len(y) else 0.5
+            r_value = 0.5
 
         return float(min(1.0, abs(r_value)))
 

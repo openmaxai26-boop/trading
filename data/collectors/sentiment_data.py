@@ -30,10 +30,10 @@ class SentimentDataCollector:
         self._sentiment_model = None  # Lazy-loaded
 
     def _load_sentiment_model(self):
-        """Lazy-load FinBERT sentiment model."""
+        """Lazy-load FinBERT sentiment model (requires transformers package)."""
         if self._sentiment_model is None:
             try:
-                from transformers import pipeline
+                from transformers import pipeline  # optional dependency
                 self._sentiment_model = pipeline(
                     "sentiment-analysis",
                     model="ProsusAI/finbert",

@@ -108,7 +108,7 @@ class TemporalEmbeddingGenerator:
         numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
         # Drop columns with too many NaNs
         valid_cols = [c for c in numeric_cols if df[c].isna().mean() < 0.2]
-        data = df[valid_cols].fillna(method="ffill").fillna(0).values.astype(np.float32)
+        data = df[valid_cols].ffill().fillna(0).values.astype(np.float32)
 
         # Normalize per feature (z-score)
         mean = data.mean(axis=0)

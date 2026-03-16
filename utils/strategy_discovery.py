@@ -10,7 +10,8 @@ from typing import Any, Callable, Optional
 import numpy as np
 import pandas as pd
 
-from backtesting.engine import BacktestEngine
+# BacktestEngine is imported lazily inside the class to avoid circular imports
+# (backtesting → utils.logger → utils → strategy_discovery → backtesting)
 from config.settings import Settings
 from utils.logger import get_logger
 
@@ -40,6 +41,7 @@ class GeneticStrategyOptimizer:
         param_bounds: dict[str, tuple[float, float]],
         settings: Optional[Settings] = None,
     ) -> None:
+        from backtesting.engine import BacktestEngine  # lazy import — avoids circular
         self.strategy_fn = strategy_fn
         self.ohlcv = ohlcv
         self.param_bounds = param_bounds
@@ -268,6 +270,7 @@ class StrategyDiscovery:
     """
 
     def __init__(self, settings: Optional[Settings] = None) -> None:
+        from backtesting.engine import BacktestEngine  # lazy import
         self.settings = settings or Settings()
         self.backtester = BacktestEngine(settings)
         self.rl_agent = RLStrategyAgent(settings)

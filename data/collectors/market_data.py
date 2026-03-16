@@ -7,14 +7,26 @@ import time
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 
-import ccxt
 import numpy as np
 import pandas as pd
-import yfinance as yf
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from config.settings import Settings
 from utils.logger import get_logger
+
+try:
+    import ccxt
+    CCXT_AVAILABLE = True
+except ImportError:
+    ccxt = None  # type: ignore[assignment]
+    CCXT_AVAILABLE = False
+
+try:
+    import yfinance as yf
+    YFINANCE_AVAILABLE = True
+except ImportError:
+    yf = None  # type: ignore[assignment]
+    YFINANCE_AVAILABLE = False
 
 logger = get_logger(__name__)
 
@@ -26,7 +38,10 @@ class MarketDataCollector:
         self.settings = settings or Settings()
         self._exchange = self._init_exchange()
 
-    def _init_exchange(self) -> ccxt.Exchange:
+    def _init_exchange(self):
+        if not CCXT_AVAILABLE:
+            logger.warning("ccxt not installed — crypto market data unavailable")
+            return None
         cfg = self.settings.data
         exchange_class = getattr(ccxt, cfg.exchange_id, ccxt.binance)
         exchange = exchange_class(
@@ -44,7 +59,7 @@ class MarketDataCollector:
     # ------------------------------------------------------------------ #
 
     @retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=30))
-    def fetch_ohlcv_crypto(
+    def fetch_ohlcv_crypto(  # type: ignore[return]
         self,
         symbol: str,
         timeframe: str = "1d",
@@ -52,11 +67,13 @@ class MarketDataCollector:
         limit: int = 1000,
     ) -> pd.DataFrame:
         """Fetch OHLCV data for a crypto symbol from the configured exchange."""
+        if not CCXT_AVAILABLE or self._exchange is None:
+            logger.warning("ccxt unavailable — cannot fetch crypto OHLCV")
+            return pd.DataFrame()
         since_ms: Optional[int] = None
         if since:
             since_ms = int(since.timestamp() * 1000)
         elif not since:
-            # Default: lookback_days
             lookback = self.settings.data.lookback_days
             since_ms = int((datetime.now(timezone.utc) - timedelta(days=lookback)).timestamp() * 1000)
 
@@ -93,6 +110,8 @@ class MarketDataCollector:
 
     def get_available_crypto_symbols(self, quote_currency: str = "USDT") -> list[str]:
         """Return all available symbols quoted in the given currency."""
+        if not CCXT_AVAILABLE or self._exchange is None:
+            return []
         try:
             markets = self._exchange.load_markets()
             symbols = [
@@ -118,6 +137,9 @@ class MarketDataCollector:
         interval: str = "1d",
     ) -> pd.DataFrame:
         """Fetch OHLCV data for an equity via yfinance."""
+        if not YFINANCE_AVAILABLE:
+            logger.warning("yfinance not installed — cannot fetch equity data")
+            return pd.DataFrame()
         try:
             data = yf.download(ticker, period=period, interval=interval, progress=False, auto_adjust=True)
             if data.empty:

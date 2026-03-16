@@ -62,6 +62,7 @@ class BacktestEngine:
         ohlcv: pd.DataFrame,
         strategy_fn: StrategyFn,
         params: dict,
+        min_bars: int = 50,
     ) -> BacktestResult:
         """
         Run a single backtest of a strategy on OHLCV data.
@@ -70,12 +71,13 @@ class BacktestEngine:
             ohlcv:        OHLCV DataFrame
             strategy_fn:  Function(ohlcv, params) → pd.Series of signals
             params:       Strategy parameters dict
+            min_bars:     Minimum bars required (50 for walk-forward folds)
 
         Returns:
             BacktestResult with all metrics.
         """
-        if len(ohlcv) < self.settings.data.min_bars_required:
-            raise ValueError(f"Insufficient data: {len(ohlcv)} < {self.settings.data.min_bars_required}")
+        if len(ohlcv) < min_bars:
+            raise ValueError(f"Insufficient data: {len(ohlcv)} < {min_bars}")
 
         # Generate signals
         signals = strategy_fn(ohlcv, params)
@@ -114,7 +116,7 @@ class BacktestEngine:
                 continue
 
             try:
-                result = self.run_single(test_data, strategy_fn, params)
+                result = self.run_single(test_data, strategy_fn, params, min_bars=50)
                 fold_results.append(result)
             except Exception as e:
                 logger.debug(f"Walk-forward fold {fold+1} failed: {e}")

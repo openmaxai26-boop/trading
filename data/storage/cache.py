@@ -7,10 +7,16 @@ from datetime import datetime
 from typing import Any, Optional
 
 import pandas as pd
-import redis
 
 from config.settings import Settings
 from utils.logger import get_logger
+
+try:
+    import redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    redis = None  # type: ignore[assignment]
+    REDIS_AVAILABLE = False
 
 logger = get_logger(__name__)
 
@@ -20,6 +26,11 @@ class CacheManager:
 
     def __init__(self, settings: Optional[Settings] = None) -> None:
         self.settings = settings or Settings()
+        self._client = None
+        self.available = False
+        if not REDIS_AVAILABLE:
+            logger.warning("redis package not installed — cache disabled")
+            return
         try:
             self._client = redis.from_url(
                 self.settings.redis.url,

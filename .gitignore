@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+logs/
+*.log
+data/lake/
+models/checkpoints/*.pt
+models/checkpoints/*.pkl
+models/checkpoints/*.json
+predictions/reports/
+predictions/history/
+.DS_Store

@@ -1,0 +1,224 @@
+# ============================================================
+# CONFIGURATION GLOBALE DU SYSTÈME DE TRADING IA
+# ============================================================
+# Ce fichier contrôle TOUS les paramètres du système.
+# Modifiez-le selon vos besoins SANS toucher au code Python.
+# ============================================================
+
+# --- IDENTIFICATION DU SYSTÈME ---
+system:
+  name: "AI Trading System"
+  version: "1.0.0"
+  mode: "paper"          # "paper" = simulation sans argent réel | "live" = production réelle
+  log_level: "INFO"      # DEBUG / INFO / WARNING / ERROR
+  random_seed: 42        # Graine aléatoire pour reproductibilité
+
+# --- ACTIFS SUIVIS ---
+# Ajoutez ou retirez des symboles selon vos besoins
+assets:
+  stocks:
+    - "AAPL"    # Apple
+    - "MSFT"    # Microsoft
+    - "GOOGL"   # Google
+    - "AMZN"    # Amazon
+    - "NVDA"    # NVIDIA (secteur IA)
+    - "SPY"     # ETF S&P 500 (indice de référence)
+
+  commodities:
+    - "GC=F"    # Or (Gold Futures)
+    - "CL=F"    # Pétrole brut (Crude Oil Futures)
+    - "SI=F"    # Argent (Silver Futures)
+
+  crypto:
+    - "BTC-USD"   # Bitcoin
+    - "ETH-USD"   # Ethereum
+    - "BNB-USD"   # Binance Coin
+
+# --- PARAMÈTRES TEMPORELS ---
+timeframes:
+  primary: "1d"          # Intervalle principal d'analyse (1h, 1d, 1w)
+  secondary: "1h"        # Intervalle secondaire pour confirmation
+  lookback_days: 730     # Nombre de jours d'historique (2 ans)
+  train_ratio: 0.70      # 70% des données pour l'entraînement
+  val_ratio: 0.15        # 15% pour la validation
+  test_ratio: 0.15       # 15% pour les tests (jamais vus pendant l'entraînement)
+
+# --- COUCHE DONNÉES ---
+data:
+  cache_dir: "./data/cache"           # Dossier de cache local
+  raw_dir: "./data/raw"               # Données brutes
+  processed_dir: "./data/processed"   # Données traitées
+  update_frequency_hours: 1           # Mise à jour toutes les X heures
+
+  # Sources de données alternatives
+  sources:
+    market_data: "yfinance"           # Source gratuite Yahoo Finance
+    crypto_exchange: "binance"        # Exchange crypto
+    news_api_key: ""                  # Clé API NewsAPI (optionnel)
+
+  # Nettoyage des données
+  cleaning:
+    fill_missing: "forward"           # Remplir les valeurs manquantes (forward fill)
+    remove_outliers: true             # Supprimer les valeurs aberrantes
+    outlier_threshold: 5.0            # Seuil en écarts-types (z-score)
+    min_history_days: 365             # Minimum 1 an d'historique requis
+
+# --- INGÉNIERIE DES VARIABLES (FEATURES) ---
+features:
+  # Indicateurs techniques
+  technical:
+    rsi_period: 14                    # Période RSI (14 jours standard)
+    macd_fast: 12                     # MACD période rapide
+    macd_slow: 26                     # MACD période lente
+    macd_signal: 9                    # MACD signal
+    bb_period: 20                     # Bandes de Bollinger période
+    bb_std: 2.0                       # Bandes de Bollinger écart-type
+    vwap_period: 14                   # VWAP période
+    atr_period: 14                    # Average True Range
+
+  # Variables statistiques
+  statistical:
+    returns_periods: [1, 5, 10, 21]   # Périodes de rendements (jours)
+    volatility_window: 21             # Fenêtre de volatilité réalisée
+
+  # Normalisation
+  normalization: "zscore"             # "zscore" | "minmax" | "robust"
+  sequence_length: 60                 # Longueur des séquences temporelles (60 bougies)
+
+# --- DÉTECTION DE RÉGIMES DE MARCHÉ ---
+regime_detector:
+  method: "hmm"                       # "hmm" = Hidden Markov Model
+  n_regimes: 4                        # Nombre de régimes (bull, bear, range, volatile)
+  hmm_n_iter: 100                     # Iterations d'entraînement HMM
+  retrain_frequency_days: 30          # Réentraîner tous les 30 jours
+
+# --- MODÈLE DE PRÉDICTION ---
+prediction_model:
+  architecture: "hybrid"              # LSTM + Transformer + CNN combinés
+
+  # LSTM (Long Short-Term Memory) - mémoire à long terme
+  lstm:
+    hidden_size: 128                  # Taille de la couche cachée
+    num_layers: 2                     # Nombre de couches LSTM empilées
+    dropout: 0.2                      # Dropout pour éviter le surapprentissage
+
+  # Transformer - attention sur les dépendances longues
+  transformer:
+    d_model: 128                      # Dimension du modèle
+    nhead: 8                          # Nombre de têtes d'attention
+    num_encoder_layers: 3             # Couches de l'encodeur
+    dropout: 0.1
+
+  # CNN - reconnaissance de patterns visuels
+  cnn:
+    channels: [32, 64, 128]           # Canaux par couche convolutive
+    kernel_sizes: [3, 5, 7]           # Tailles des filtres
+
+  # Entraînement
+  training:
+    epochs: 100                       # Nombre d'époques maximum
+    batch_size: 64                    # Taille des mini-lots
+    learning_rate: 0.001              # Taux d'apprentissage
+    patience: 15                      # Early stopping (arrêt si pas d'amélioration)
+    optimizer: "adam"                 # Optimiseur Adam
+    loss: "probabilistic"             # Perte probabiliste (NLL)
+
+# --- AGENT DE REINFORCEMENT LEARNING ---
+rl_agent:
+  algorithm: "ppo"                    # "ppo" | "sac" | "dqn"
+
+  # Paramètres PPO
+  ppo:
+    learning_rate: 0.0003
+    n_steps: 2048                     # Pas par mise à jour
+    batch_size: 64
+    n_epochs: 10                      # Epochs par mise à jour PPO
+    gamma: 0.99                       # Facteur de discount (importance du futur)
+    gae_lambda: 0.95                  # GAE lambda
+    clip_range: 0.2                   # Plage de clipping PPO
+
+  # Paramètres de l'environnement
+  environment:
+    initial_capital: 100000           # Capital initial (100 000 USD)
+    max_position_size: 0.20           # Max 20% du portefeuille par position
+    transaction_cost: 0.001           # 0.1% de frais de transaction
+    reward_function: "sharpe"         # Optimiser le ratio de Sharpe
+
+  training:
+    total_timesteps: 1000000          # 1 million de pas d'entraînement
+
+# --- GESTION DES RISQUES (CRITIQUE) ---
+risk:
+  # Limites absolues - le système STOPPE si dépassées
+  max_drawdown_pct: 15.0              # Drawdown maximum toléré : -15%
+  max_daily_loss_pct: 3.0             # Perte journalière maximum : -3%
+  max_portfolio_var_pct: 2.0          # Value at Risk journalière max : 2%
+
+  # Limites par position
+  max_position_size_pct: 10.0         # Max 10% du capital par actif
+  max_sector_exposure_pct: 30.0       # Max 30% par secteur
+  max_correlation: 0.80               # Corrélation max entre positions
+
+  # Stop-loss et take-profit
+  stop_loss_pct: 5.0                  # Stop-loss à -5% par position
+  take_profit_pct: 15.0               # Take-profit à +15% par position
+
+  # Contrôle de la volatilité
+  max_volatility_regime: "high"       # Réduire les positions en régime très volatile
+  volatility_scaling: true            # Ajuster la taille selon la volatilité
+
+  # Circuit breakers
+  circuit_breakers:
+    enable: true
+    market_crash_threshold: -5.0      # Arrêt si marché chute de -5% en 1 jour
+    consecutive_losses: 5             # Arrêt après 5 pertes consécutives
+
+# --- GESTION DU PORTEFEUILLE ---
+portfolio:
+  initial_capital: 100000             # Capital de départ : 100 000 USD
+  currency: "USD"
+
+  # Optimisation
+  optimization_method: "max_sharpe"   # "max_sharpe" | "min_volatility" | "equal_weight"
+  rebalancing_frequency: "weekly"     # "daily" | "weekly" | "monthly"
+  min_weight: 0.02                    # Poids minimum par actif (2%)
+  max_weight: 0.25                    # Poids maximum par actif (25%)
+
+  # Contraintes
+  long_only: true                     # True = long seulement (pas de short)
+  cash_buffer_pct: 5.0                # Garder 5% en cash
+
+# --- BACKTESTING ---
+backtesting:
+  start_date: "2022-01-01"            # Date de début
+  end_date: "2024-01-01"              # Date de fin
+
+  # Coûts réalistes
+  transaction_cost_pct: 0.1           # 0.1% de commission
+  slippage_pct: 0.05                  # 0.05% de glissement de prix
+
+  # Validation
+  walk_forward:
+    enable: true
+    train_window_days: 252            # 1 an d'entraînement
+    test_window_days: 63              # 3 mois de test
+    step_days: 21                     # Avancer d'1 mois à chaque fois
+
+  # Métriques cibles
+  min_sharpe_ratio: 1.0               # Ratio de Sharpe minimum acceptable
+  max_drawdown_limit: 20.0            # Drawdown maximum acceptable
+  min_win_rate: 0.50                  # Taux de réussite minimum 50%
+
+# --- APPRENTISSAGE CONTINU ---
+continuous_learning:
+  retrain_frequency_days: 7           # Réentraîner chaque semaine
+  drift_detection:
+    enable: true
+    method: "ks_test"                 # Test de Kolmogorov-Smirnov
+    p_value_threshold: 0.05           # Seuil de détection de dérive
+    window_size: 50                   # Fenêtre d'observation
+
+  performance_monitoring:
+    lookback_days: 30                 # Évaluer sur 30 jours glissants
+    min_sharpe_threshold: 0.5         # Réentraîner si Sharpe < 0.5
+    alert_on_degradation: true

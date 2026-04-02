@@ -1,3 +1,57 @@
-claude
-trading
-requests
+# ============================================================
+# SYSTÈME DE TRADING IA - DÉPENDANCES
+# ============================================================
+# Installez tout avec : pip install -r requirements.txt
+
+# --- Deep Learning ---
+torch>=2.0.0                  # PyTorch : moteur des réseaux de neurones
+torchvision>=0.15.0
+
+# --- Données financières ---
+yfinance>=0.2.28               # Téléchargement de données OHLCV gratuitement
+ccxt>=4.0.0                    # Connexion aux exchanges crypto (Binance, etc.)
+pandas-ta>=0.3.14b             # Indicateurs techniques (RSI, MACD, etc.)
+
+# --- Traitement des données ---
+numpy>=1.24.0                  # Calculs numériques rapides
+pandas>=2.0.0                  # Manipulation de tableaux de données
+scipy>=1.10.0                  # Statistiques avancées
+scikit-learn>=1.3.0            # Machine learning classique (clustering, HMM)
+hmmlearn>=0.3.0                # Modèles de Markov cachés (régimes de marché)
+
+# --- Visualisation ---
+matplotlib>=3.7.0              # Graphiques de base
+seaborn>=0.12.0                # Graphiques statistiques élégants
+plotly>=5.15.0                 # Graphiques interactifs
+
+# --- Reinforcement Learning ---
+gymnasium>=0.29.0              # Environnements pour agents RL
+stable-baselines3>=2.1.0       # Algorithmes PPO, SAC, DQN prêts à l'emploi
+
+# --- Sentiment / NLP ---
+transformers>=4.30.0           # Modèles de langage (BERT, etc.)
+nltk>=3.8.0                    # Traitement du langage naturel
+textblob>=0.17.0               # Analyse de sentiment simple
+
+# --- Optimisation de portefeuille ---
+cvxpy>=1.3.0                   # Optimisation convexe (Markowitz)
+PyPortfolioOpt>=1.5.5          # Optimisation de portefeuille moderne
+
+# --- Configuration et utilitaires ---
+pyyaml>=6.0                    # Lecture des fichiers de configuration YAML
+python-dotenv>=1.0.0           # Variables d'environnement (.env)
+loguru>=0.7.0                  # Journalisation avancée
+tqdm>=4.65.0                   # Barres de progression
+joblib>=1.3.0                  # Parallélisation et cache
+
+# --- Base de données ---
+sqlalchemy>=2.0.0              # ORM pour base de données
+sqlite3                        # Base de données légère (inclus Python)
+
+# --- API et réseau ---
+requests>=2.31.0               # Requêtes HTTP
+aiohttp>=3.8.0                 # Requêtes HTTP asynchrones
+
+# --- Tests ---
+pytest>=7.4.0                  # Framework de tests
+pytest-asyncio>=0.21.0

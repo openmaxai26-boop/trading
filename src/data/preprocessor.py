@@ -93,7 +93,7 @@ class DataPreprocessor:
                 )
                 # Remplacer par la valeur précédente (forward fill)
                 df_clean.loc[outlier_mask[outlier_mask].index, col] = np.nan
-                df_clean[col] = df_clean[col].fillna(method="ffill")
+                df_clean[col] = df_clean[col].ffill()
 
         return df_clean
 
@@ -116,9 +116,9 @@ class DataPreprocessor:
 
         if missing_before > 0:
             if method == "forward":
-                df = df.fillna(method="ffill").fillna(method="bfill")
+                df = df.ffill().bfill()
             elif method == "interpolate":
-                df = df.interpolate(method="linear").fillna(method="bfill")
+                df = df.interpolate(method="linear").bfill()
             elif method == "drop":
                 df = df.dropna()
 
@@ -277,7 +277,7 @@ class DataPreprocessor:
                 continue
             # Filtrer sur la plage commune
             df_aligned = df.loc[common_start:common_end].copy()
-            df_aligned = df_aligned.fillna(method="ffill").fillna(method="bfill")
+            df_aligned = df_aligned.ffill().bfill()
             aligned[symbol] = df_aligned
 
         return aligned

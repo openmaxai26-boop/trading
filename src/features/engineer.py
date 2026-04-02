@@ -82,16 +82,20 @@ class FeatureEngineer:
         # --- 3. Microstructure ---
         df = self.micro.compute_all(df)
 
-        # --- 4. Nettoyer les valeurs infinies ---
+        # --- 4. Dédupliquer les colonnes (au cas où concat crée des doublons) ---
+        df = df.loc[:, ~df.columns.duplicated()]
+
+        # --- 5. Nettoyer les valeurs infinies ---
         df = df.replace([np.inf, -np.inf], np.nan)
 
-        # --- 5. Imputation des NaN résiduels (forward fill puis médiane) ---
-        df = df.fillna(method="ffill").fillna(method="bfill")
-        # Pour les colonnes encore NaN (début de série), utiliser la médiane
-        for col in df.columns:
-            if df[col].isna().any():
-                median_val = df[col].median()
-                df[col] = df[col].fillna(median_val if not np.isnan(median_val) else 0.0)
+        # --- 6. Imputation des NaN résiduels (forward fill puis médiane) ---
+        df = df.ffill().bfill()
+        # Pour les colonnes encore NaN (début de série), utiliser 0
+        nan_mask = df.isnull().any(axis=0)
+        for col in df.columns[nan_mask]:
+            median_val = df[col].median()
+            fill_val = float(median_val) if not np.isnan(float(median_val)) else 0.0
+            df[col] = df[col].fillna(fill_val)
 
         # --- 6. Supprimer les premières lignes incomplètes ---
         # Les indicateurs ont besoin d'un "warmup" (ex: EMA 200 → 200 premières lignes NaN)

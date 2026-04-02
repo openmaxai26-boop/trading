@@ -343,15 +343,21 @@ class Backtester:
         daily_rets = equity.pct_change().dropna()
         vol = float(daily_rets.std() * np.sqrt(252) * 100)
 
-        # Sharpe Ratio
+        # Sharpe Ratio — retourner 0 si pas de variance (aucun trade / pas de mouvement)
         risk_free_daily = 0.05 / 252
         excess_rets = daily_rets - risk_free_daily
-        sharpe = float(excess_rets.mean() / (excess_rets.std() + 1e-8) * np.sqrt(252))
+        ret_std = float(excess_rets.std())
+        if ret_std < 1e-6:
+            sharpe = 0.0
+        else:
+            sharpe = float(excess_rets.mean() / ret_std * np.sqrt(252))
+        sharpe = float(np.clip(sharpe, -50, 50))  # Borner pour lisibilité
 
         # Sortino Ratio (pénalise seulement les rendements négatifs)
         downside_rets = daily_rets[daily_rets < 0]
         downside_std  = float(downside_rets.std() * np.sqrt(252)) if len(downside_rets) > 0 else 1e-8
-        sortino = float(excess_rets.mean() * 252 / (downside_std + 1e-8))
+        sortino_raw = float(excess_rets.mean() * 252 / (downside_std + 1e-8))
+        sortino = float(np.clip(sortino_raw, -50, 50))
 
         # Drawdown
         cummax  = equity.cummax()

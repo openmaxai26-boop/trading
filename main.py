@@ -205,6 +205,50 @@ def run_demo(config: dict):
     logger.info("=" * 60)
 
 
+def _generate_synthetic_ohlcv(
+    symbol: str,
+    n_days: int = 800,
+    seed: int = 42
+) -> "pd.DataFrame":
+    """
+    Génère des données OHLCV synthétiques réalistes (Geometric Brownian Motion).
+    Utilisé quand Yahoo Finance est inaccessible (pas d'internet).
+
+    Les paramètres drift/vol sont calibrés sur des actifs réels typiques :
+    - Actions US : drift ~8%/an, vol ~20%/an
+    - Bitcoin    : drift ~50%/an, vol ~70%/an
+    - Or         : drift ~5%/an, vol ~12%/an
+    """
+    import numpy as np
+    import pandas as pd
+
+    params = {
+        "AAPL" : (150.0, 0.00032, 0.013), "MSFT"  : (280.0, 0.00035, 0.014),
+        "GOOGL": (130.0, 0.00028, 0.015), "AMZN"  : (160.0, 0.00030, 0.018),
+        "NVDA" : (400.0, 0.00060, 0.025), "SPY"   : (400.0, 0.00025, 0.010),
+        "BTC-USD": (30000, 0.00150, 0.040), "ETH-USD": (2000, 0.00120, 0.045),
+        "BNB-USD": (250.0, 0.00100, 0.038), "GC=F" : (1800.0, 0.00010, 0.007),
+        "CL=F" : (75.0, 0.00005, 0.020),  "SI=F"  : (22.0, 0.00008, 0.012),
+    }
+    start_price, drift, vol = params.get(symbol, (100.0, 0.00025, 0.015))
+
+    rng  = np.random.default_rng(seed)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n_days)
+    rets  = rng.normal(drift, vol, n_days)
+    close = start_price * np.exp(np.cumsum(rets))
+
+    noise  = np.abs(rng.normal(0, vol * 0.4, n_days))
+    high   = close * (1 + noise)
+    low    = close * (1 - noise)
+    open_  = np.roll(close, 1); open_[0] = close[0]
+    volume = np.abs(rng.normal(5_000_000, 1_500_000, n_days)).astype(int)
+
+    return pd.DataFrame(
+        {"open": open_, "high": high, "low": low, "close": close, "volume": volume},
+        index=dates
+    )
+
+
 def run_backtest(config: dict, symbol: str = "AAPL"):
     """
     Mode BACKTESTING : télécharge les données réelles et simule la stratégie.
@@ -218,6 +262,7 @@ def run_backtest(config: dict, symbol: str = "AAPL"):
     6. Afficher le rapport de performance
     """
     import numpy as np
+    import pandas as pd
     import torch
     from torch.utils.data import DataLoader
 
@@ -233,8 +278,8 @@ def run_backtest(config: dict, symbol: str = "AAPL"):
     raw_data = collector.download_stock_data([symbol])
 
     if symbol not in raw_data:
-        logger.error(f"Impossible de télécharger les données pour {symbol}")
-        return
+        logger.warning(f"Téléchargement impossible pour {symbol} → génération de données synthétiques réalistes")
+        raw_data = {symbol: _generate_synthetic_ohlcv(symbol, n_days=800, seed=42)}
 
     df_raw = raw_data[symbol]
 
@@ -288,13 +333,23 @@ def run_backtest(config: dict, symbol: str = "AAPL"):
     signals_list = []
 
     device = next(model.parameters()).device
+    probs_all = []
     with torch.no_grad():
         X_test = df_test[feat_cols].values.astype("float32")
         for i in range(seq_len, len(X_test)):
             x_seq = torch.FloatTensor(X_test[i-seq_len:i]).unsqueeze(0).to(device)
             prob = float(model.predict_proba(x_seq).cpu())
-            sig = 1 if prob > 0.55 else (-1 if prob < 0.45 else 0)
+            probs_all.append(prob)
+            sig = 1 if prob > 0.52 else (-1 if prob < 0.48 else 0)
             signals_list.append(sig)
+
+    if probs_all:
+        import numpy as _np
+        logger.info(
+            f"Distribution des probabilités : "
+            f"min={_np.min(probs_all):.2f} | moy={_np.mean(probs_all):.2f} | max={_np.max(probs_all):.2f} | "
+            f"BUY={sum(p>0.52 for p in probs_all)} | SELL={sum(p<0.48 for p in probs_all)} | HOLD={sum(0.48<=p<=0.52 for p in probs_all)}"
+        )
 
     # Aligner les signaux avec les dates de test
     signal_index = df_test.index[seq_len:]

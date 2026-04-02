@@ -450,7 +450,7 @@ class ModelTrainer:
         # Scheduler : réduit le LR si pas d'amélioration
         self.scheduler = optim.lr_scheduler.ReduceLROnPlateau(
             self.optimizer, mode="min", factor=0.5,
-            patience=5, verbose=False
+            patience=5
         )
 
         self.epochs   = train_cfg["epochs"]

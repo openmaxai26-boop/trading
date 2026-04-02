@@ -1,0 +1,383 @@
+2026-04-02 13:52:13 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:52:13 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:52:13 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:52:13 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:52:13 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:52:13 | INFO     | Main                 | Mode : DEMO
+2026-04-02 13:52:13 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:52:14 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:14 | INFO     | Main                 | MODE DÉMO — Génération de données synthétiques
+2026-04-02 13:52:14 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:14 | INFO     | Main                 | Données synthétiques créées : 500 jours
+2026-04-02 13:52:14 | INFO     | Main                 | Prix initial : 100.78$ | Prix final : 122.30$
+2026-04-02 13:52:14 | INFO     | Main                 | 
+--- FEATURE ENGINEERING ---
+2026-04-02 13:52:15 | INFO     | FeatureEngineer      | Ingénierie des features pour DEMO…
+2026-04-02 13:52:15 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:52:16 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:52:16 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:52:32 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:52:32 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:52:32 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:52:32 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:52:32 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:52:32 | INFO     | Main                 | Mode : DEMO
+2026-04-02 13:52:32 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:52:34 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:34 | INFO     | Main                 | MODE DÉMO — Génération de données synthétiques
+2026-04-02 13:52:34 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:34 | INFO     | Main                 | Données synthétiques créées : 500 jours
+2026-04-02 13:52:34 | INFO     | Main                 | Prix initial : 100.78$ | Prix final : 122.30$
+2026-04-02 13:52:34 | INFO     | Main                 | 
+--- FEATURE ENGINEERING ---
+2026-04-02 13:52:34 | INFO     | FeatureEngineer      | Ingénierie des features pour DEMO…
+2026-04-02 13:52:34 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:52:35 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:52:35 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:52:48 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:52:48 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:52:48 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:52:48 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:52:48 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:52:48 | INFO     | Main                 | Mode : DEMO
+2026-04-02 13:52:48 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:52:49 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:49 | INFO     | Main                 | MODE DÉMO — Génération de données synthétiques
+2026-04-02 13:52:49 | INFO     | Main                 | ============================================================
+2026-04-02 13:52:49 | INFO     | Main                 | Données synthétiques créées : 500 jours
+2026-04-02 13:52:49 | INFO     | Main                 | Prix initial : 100.78$ | Prix final : 122.30$
+2026-04-02 13:52:49 | INFO     | Main                 | 
+--- FEATURE ENGINEERING ---
+2026-04-02 13:52:50 | INFO     | FeatureEngineer      | Ingénierie des features pour DEMO…
+2026-04-02 13:52:50 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:52:50 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:52:50 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:53:07 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:53:07 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:53:07 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:53:07 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:53:07 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:53:07 | INFO     | Main                 | Mode : DEMO
+2026-04-02 13:53:07 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:53:08 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:08 | INFO     | Main                 | MODE DÉMO — Génération de données synthétiques
+2026-04-02 13:53:08 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:08 | INFO     | Main                 | Données synthétiques créées : 500 jours
+2026-04-02 13:53:08 | INFO     | Main                 | Prix initial : 100.78$ | Prix final : 122.30$
+2026-04-02 13:53:08 | INFO     | Main                 | 
+--- FEATURE ENGINEERING ---
+2026-04-02 13:53:09 | INFO     | FeatureEngineer      | Ingénierie des features pour DEMO…
+2026-04-02 13:53:09 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:53:10 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:53:10 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:53:10 | INFO     | FeatureEngineer      |   DEMO : 50 features calculées sur 290 lignes ✓
+2026-04-02 13:53:10 | INFO     | Main                 | Features générées : 50 colonnes
+2026-04-02 13:53:10 | INFO     | Main                 | 
+--- DÉTECTION DE RÉGIMES ---
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-02 13:53:10 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   42.4%      -0.254%        23.5%
+2026-04-02 13:53:10 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   26.6%      +0.532%        18.0%
+2026-04-02 13:53:10 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    5.5%      -0.146%         0.0%
+2026-04-02 13:53:10 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   25.5%      +0.115%        27.3%
+2026-04-02 13:53:10 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-02 13:53:10 | INFO     | Main                 | Régime actuel       : BULL
+2026-04-02 13:53:10 | INFO     | Main                 | Confiance           : 100%
+2026-04-02 13:53:10 | INFO     | Main                 | Conseil             : Favoriser les positions longues (tendance haussière)
+2026-04-02 13:53:10 | INFO     | Main                 | 
+--- MODÈLE DE PRÉDICTION (LSTM+Transformer+CNN) ---
+2026-04-02 13:53:10 | INFO     | Main                 | Modèle créé : 1,031,650 paramètres
+2026-04-02 13:53:10 | INFO     | Main                 | Signal généré       : BUY
+2026-04-02 13:53:10 | INFO     | Main                 | Probabilité hausse  : 87.7%
+2026-04-02 13:53:10 | INFO     | Main                 | Score de confiance  : 75.3%
+2026-04-02 13:53:10 | INFO     | Main                 | Niveau de risque    : HIGH
+2026-04-02 13:53:10 | INFO     | Main                 | Rendement attendu   : +46.163%
+2026-04-02 13:53:10 | INFO     | Main                 | Incertitude         : 57.191%
+2026-04-02 13:53:10 | INFO     | Main                 | 
+--- GESTION DES RISQUES ---
+2026-04-02 13:53:10 | INFO     | RiskManager          | =======================================================
+2026-04-02 13:53:10 | INFO     | RiskManager          | LIMITES DE RISQUE ACTIVES :
+2026-04-02 13:53:10 | INFO     | RiskManager          |   Drawdown max        : -15%
+2026-04-02 13:53:10 | INFO     | RiskManager          |   Perte journalière   : -3%
+2026-04-02 13:53:10 | INFO     | RiskManager          |   Taille max/position : 10%
+2026-04-02 13:53:10 | INFO     | RiskManager          |   Stop-loss           : -5%
+2026-04-02 13:53:10 | INFO     | RiskManager          |   Take-profit         : +15%
+2026-04-02 13:53:10 | INFO     | RiskManager          | =======================================================
+2026-04-02 13:53:10 | INFO     | RiskManager          | [RiskManager] DEMO BUY → Trade autorisé | Taille: 7.5% (régime=100%, vol=75%, statut=100%)
+2026-04-02 13:53:10 | INFO     | Main                 | Trade autorisé      : True
+2026-04-02 13:53:10 | INFO     | Main                 | Taille recommandée  : 7.5%
+2026-04-02 13:53:10 | INFO     | Main                 | Raison              : Trade autorisé | Taille: 7.5% (régime=100%, vol=75%, statut=100%)
+2026-04-02 13:53:10 | INFO     | Main                 | 
+--- ALLOCATION DE PORTEFEUILLE ---
+2026-04-02 13:53:10 | INFO     | PortfolioManager     | Optimisation (max_sharpe) :
+2026-04-02 13:53:10 | INFO     | PortfolioManager     |   Rendement attendu : 13.3%
+2026-04-02 13:53:10 | INFO     | PortfolioManager     |   Volatilité        : 18.0%
+2026-04-02 13:53:10 | INFO     | PortfolioManager     |   Sharpe ratio      : 0.46
+2026-04-02 13:53:10 | INFO     | Main                 | Poids optimaux (Max Sharpe) :
+2026-04-02 13:53:10 | INFO     | Main                 |   AAPL       : 33.3%
+2026-04-02 13:53:10 | INFO     | Main                 |   BTC        : 33.3%
+2026-04-02 13:53:10 | INFO     | Main                 |   GC=F       : 33.3%
+2026-04-02 13:53:10 | INFO     | Main                 | 
+============================================================
+2026-04-02 13:53:10 | INFO     | Main                 | RÉSUMÉ DU MODE DÉMO
+2026-04-02 13:53:10 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ Données synthétiques générées (500 jours)
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ 50 features calculées
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ Régime détecté : BULL
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ Signal : BUY (87.7% probabilité)
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ Risque : HIGH
+2026-04-02 13:53:10 | INFO     | Main                 | ✓ Allocation optimale : 3 actifs
+2026-04-02 13:53:10 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:10 | INFO     | Main                 | Pour un backtest complet, lancez : python main.py --mode backtest
+2026-04-02 13:53:10 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:20 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:53:20 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:53:20 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:53:20 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:53:20 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:53:20 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 13:53:20 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:53:21 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:21 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 13:53:21 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:22 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 13:53:22 | ERROR    | DataCollector        | yfinance non installé. Lancez : pip install yfinance
+2026-04-02 13:53:53 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:53:53 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:53:53 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:53:53 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:53:53 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:53:53 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 13:53:53 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:53:54 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:54 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 13:53:54 | INFO     | Main                 | ============================================================
+2026-04-02 13:53:55 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 13:53:55 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-02 13:53:55 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-02 13:53:55 | ERROR    | Main                 | Impossible de télécharger les données pour AAPL
+2026-04-02 13:54:29 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:54:29 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:54:29 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:54:29 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:54:29 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:54:29 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 13:54:29 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:54:30 | INFO     | Main                 | ============================================================
+2026-04-02 13:54:30 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 13:54:30 | INFO     | Main                 | ============================================================
+2026-04-02 13:54:31 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 13:54:31 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-02 13:54:31 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-02 13:54:31 | WARNING  | Main                 | Téléchargement impossible pour AAPL → génération de données synthétiques réalistes
+2026-04-02 13:54:31 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-02 13:54:31 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-02 13:54:31 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-02 13:54:31 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-10 → 2026-04-02
+2026-04-02 13:54:31 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-02 13:54:32 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-02 13:54:32 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:54:33 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:54:33 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:54:33 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-02 13:54:33 | INFO     | Main                 | Train: 413 | Val: 88 | Test: 89 jours
+2026-04-02 13:54:33 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-02 13:54:43 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:54:43 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:54:43 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:54:43 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:54:43 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:54:43 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 13:54:43 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:54:44 | INFO     | Main                 | ============================================================
+2026-04-02 13:54:44 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 13:54:44 | INFO     | Main                 | ============================================================
+2026-04-02 13:54:45 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 13:54:45 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-02 13:54:45 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-02 13:54:45 | WARNING  | Main                 | Téléchargement impossible pour AAPL → génération de données synthétiques réalistes
+2026-04-02 13:54:45 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-02 13:54:45 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-02 13:54:45 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-02 13:54:45 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-10 → 2026-04-02
+2026-04-02 13:54:45 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-02 13:54:45 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-02 13:54:45 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:54:46 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:54:46 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:54:46 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-02 13:54:46 | INFO     | Main                 | Train: 413 | Val: 88 | Test: 89 jours
+2026-04-02 13:54:46 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-02 13:54:47 | INFO     | PredictionModel      | Début de l'entraînement (100 époques max)…
+2026-04-02 13:54:47 | INFO     | PredictionModel      | Paramètres : 1,031,650
+2026-04-02 13:54:49 | INFO     | PredictionModel      |   Époque   1/100 | Train=0.6281 | Val=-0.5494 | Patience=0/15
+2026-04-02 13:55:03 | INFO     | PredictionModel      |   Époque  10/100 | Train=-1.6237 | Val=-1.9003 | Patience=3/15
+2026-04-02 13:55:16 | INFO     | PredictionModel      |   Époque  20/100 | Train=-1.9200 | Val=-2.5626 | Patience=0/15
+2026-04-02 13:55:29 | INFO     | PredictionModel      |   Époque  30/100 | Train=-2.4601 | Val=-2.8089 | Patience=0/15
+2026-04-02 13:55:42 | INFO     | PredictionModel      |   Époque  40/100 | Train=-2.6534 | Val=-3.1031 | Patience=0/15
+2026-04-02 13:55:56 | INFO     | PredictionModel      |   Époque  50/100 | Train=-2.5983 | Val=-3.1018 | Patience=4/15
+2026-04-02 13:56:09 | INFO     | PredictionModel      |   Époque  60/100 | Train=-2.8082 | Val=-3.2043 | Patience=0/15
+2026-04-02 13:56:23 | INFO     | PredictionModel      |   Époque  70/100 | Train=-2.8131 | Val=-3.2357 | Patience=7/15
+2026-04-02 13:56:36 | INFO     | PredictionModel      |   Époque  80/100 | Train=-2.9994 | Val=-3.3596 | Patience=2/15
+2026-04-02 13:56:49 | INFO     | PredictionModel      |   Époque  90/100 | Train=-3.0511 | Val=-3.4189 | Patience=5/15
+2026-04-02 13:57:02 | INFO     | PredictionModel      |   Époque 100/100 | Train=-3.0539 | Val=-3.4703 | Patience=2/15
+2026-04-02 13:57:02 | INFO     | PredictionModel      | Meilleur modèle rechargé (val_loss=-3.4740) ✓
+2026-04-02 13:57:02 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 13:57:02 | INFO     | PredictionModel      | RÉSULTATS SUR DONNÉES DE TEST :
+2026-04-02 13:57:02 | INFO     | PredictionModel      |   Accuracy directionnelle : 41.4%
+2026-04-02 13:57:02 | INFO     | PredictionModel      |   MAE rendement           : 0.8920%
+2026-04-02 13:57:02 | INFO     | PredictionModel      |   Échantillons évalués    : 29
+2026-04-02 13:57:02 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 13:57:13 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 13:57:13 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 13:57:13 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 13:57:13 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 13:57:13 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 13:57:13 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 13:57:13 | INFO     | Main                 | Système : PAPER
+2026-04-02 13:57:14 | INFO     | Main                 | ============================================================
+2026-04-02 13:57:14 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 13:57:14 | INFO     | Main                 | ============================================================
+2026-04-02 13:57:15 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 13:57:15 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-02 13:57:15 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-02 13:57:15 | WARNING  | Main                 | Téléchargement impossible pour AAPL → génération de données synthétiques réalistes
+2026-04-02 13:57:15 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-02 13:57:15 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-02 13:57:15 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-02 13:57:15 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-10 → 2026-04-02
+2026-04-02 13:57:15 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-02 13:57:15 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-02 13:57:15 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 13:57:16 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 13:57:16 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 13:57:16 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-02 13:57:16 | INFO     | Main                 | Train: 413 | Val: 88 | Test: 89 jours
+2026-04-02 13:57:16 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-02 13:57:17 | INFO     | PredictionModel      | Début de l'entraînement (100 époques max)…
+2026-04-02 13:57:17 | INFO     | PredictionModel      | Paramètres : 1,031,650
+2026-04-02 13:57:19 | INFO     | PredictionModel      |   Époque   1/100 | Train=1.3742 | Val=0.6487 | Patience=0/15
+2026-04-02 13:57:33 | INFO     | PredictionModel      |   Époque  10/100 | Train=-1.5514 | Val=-1.8604 | Patience=0/15
+2026-04-02 13:57:47 | INFO     | PredictionModel      |   Époque  20/100 | Train=-2.1001 | Val=-2.5341 | Patience=2/15
+2026-04-02 13:58:01 | INFO     | PredictionModel      |   Époque  30/100 | Train=-2.3681 | Val=-2.7859 | Patience=1/15
+2026-04-02 13:58:15 | INFO     | PredictionModel      |   Époque  40/100 | Train=-2.5404 | Val=-2.7273 | Patience=2/15
+2026-04-02 13:58:29 | INFO     | PredictionModel      |   Époque  50/100 | Train=-2.6520 | Val=-3.1288 | Patience=1/15
+2026-04-02 13:58:44 | INFO     | PredictionModel      |   Époque  60/100 | Train=-2.7161 | Val=-3.1909 | Patience=3/15
+2026-04-02 13:59:00 | INFO     | PredictionModel      |   Époque  70/100 | Train=-2.8251 | Val=-3.3617 | Patience=0/15
+2026-04-02 13:59:16 | INFO     | PredictionModel      |   Époque  80/100 | Train=-2.7753 | Val=-2.8205 | Patience=2/15
+2026-04-02 13:59:32 | INFO     | PredictionModel      |   Époque  90/100 | Train=-3.1600 | Val=-3.5180 | Patience=0/15
+2026-04-02 13:59:48 | INFO     | PredictionModel      |   Époque 100/100 | Train=-3.2004 | Val=-3.4861 | Patience=9/15
+2026-04-02 13:59:48 | INFO     | PredictionModel      | Meilleur modèle rechargé (val_loss=-3.5218) ✓
+2026-04-02 13:59:48 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 13:59:48 | INFO     | PredictionModel      | RÉSULTATS SUR DONNÉES DE TEST :
+2026-04-02 13:59:48 | INFO     | PredictionModel      |   Accuracy directionnelle : 37.9%
+2026-04-02 13:59:48 | INFO     | PredictionModel      |   MAE rendement           : 0.8757%
+2026-04-02 13:59:48 | INFO     | PredictionModel      |   Échantillons évalués    : 29
+2026-04-02 13:59:48 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 13:59:48 | INFO     | Backtester           | Démarrage du backtesting : AAPL
+2026-04-02 13:59:48 | INFO     | Backtester           | Période : 2025-12-01 → 2026-04-02
+2026-04-02 13:59:48 | INFO     | Backtester           | ============================================================
+2026-04-02 13:59:48 | INFO     | Backtester           | RAPPORT DE BACKTESTING : AAPL
+2026-04-02 13:59:48 | INFO     | Backtester           | ============================================================
+2026-04-02 13:59:48 | INFO     | Backtester           |   symbol                : AAPL
+2026-04-02 13:59:48 | INFO     | Backtester           |   période               : 2025-12-01 → 2026-04-02
+2026-04-02 13:59:48 | INFO     | Backtester           |   capital_initial       : 100,000$
+2026-04-02 13:59:48 | INFO     | Backtester           |   capital_final         : 100,000$
+2026-04-02 13:59:48 | INFO     | Backtester           |   rendement_total       : +0.0%
+2026-04-02 13:59:48 | INFO     | Backtester           |   sharpe_ratio          : -314970.39
+2026-04-02 13:59:48 | INFO     | Backtester           |   sortino_ratio         : -2500000.0
+2026-04-02 13:59:48 | INFO     | Backtester           |   max_drawdown          : 0.0%
+2026-04-02 13:59:48 | INFO     | Backtester           |   volatilité            : 0.0%
+2026-04-02 13:59:48 | INFO     | Backtester           |   cagr                  : 0.0%
+2026-04-02 13:59:48 | INFO     | Backtester           |   total_trades          : 0
+2026-04-02 13:59:48 | INFO     | Backtester           |   win_rate              : 0.0%
+2026-04-02 13:59:48 | INFO     | Backtester           |   profit_factor         : 0.0
+2026-04-02 13:59:48 | INFO     | Backtester           |   benchmark             : +7.2%
+2026-04-02 13:59:48 | INFO     | Backtester           |   alpha                 : -7.2%
+2026-04-02 13:59:48 | INFO     | Backtester           | ============================================================
+2026-04-02 13:59:48 | INFO     | Backtester           |   CRITÈRES RÉUSSIS (1/4) :
+2026-04-02 13:59:48 | INFO     | Backtester           |     ✓ MaxDD ≥ -20% (0.0%)
+2026-04-02 13:59:48 | INFO     | Backtester           |     ✗ Sharpe ≥ 1.0 (-314970.39)
+2026-04-02 13:59:48 | INFO     | Backtester           |     ✗ Win Rate ≥ 50% (0.0%)
+2026-04-02 13:59:48 | INFO     | Backtester           |     ✗ Profit Factor ≥ 1.5 (0.00)
+2026-04-02 13:59:48 | INFO     | Backtester           | ============================================================
+2026-04-02 13:59:48 | INFO     | Backtester           | Résultats sauvegardés : ./results/AAPL_backtest.json
+2026-04-02 14:00:40 | INFO     | Main                 | Configuration chargée depuis : ./config/config.yaml
+2026-04-02 14:00:40 | INFO     | Main                 | ╔══════════════════════════════════════════════════════╗
+2026-04-02 14:00:40 | INFO     | Main                 | ║      SYSTÈME DE TRADING IA — VERSION 1.0             ║
+2026-04-02 14:00:40 | INFO     | Main                 | ║      Architecture institutionnelle complète           ║
+2026-04-02 14:00:40 | INFO     | Main                 | ╚══════════════════════════════════════════════════════╝
+2026-04-02 14:00:40 | INFO     | Main                 | Mode : BACKTEST
+2026-04-02 14:00:40 | INFO     | Main                 | Système : PAPER
+2026-04-02 14:00:42 | INFO     | Main                 | ============================================================
+2026-04-02 14:00:42 | INFO     | Main                 | MODE BACKTESTING — AAPL
+2026-04-02 14:00:42 | INFO     | Main                 | ============================================================
+2026-04-02 14:00:42 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-02 14:00:43 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-02 14:00:43 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-02 14:00:43 | WARNING  | Main                 | Téléchargement impossible pour AAPL → génération de données synthétiques réalistes
+2026-04-02 14:00:43 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-02 14:00:43 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-02 14:00:43 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-02 14:00:43 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-10 → 2026-04-02
+2026-04-02 14:00:43 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-02 14:00:43 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-02 14:00:43 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-02 14:00:44 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-02 14:00:44 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-02 14:00:44 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-02 14:00:44 | INFO     | Main                 | Train: 413 | Val: 88 | Test: 89 jours
+2026-04-02 14:00:44 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-02 14:00:45 | INFO     | PredictionModel      | Début de l'entraînement (100 époques max)…
+2026-04-02 14:00:45 | INFO     | PredictionModel      | Paramètres : 1,031,650
+2026-04-02 14:00:46 | INFO     | PredictionModel      |   Époque   1/100 | Train=1.6507 | Val=-0.2613 | Patience=0/15
+2026-04-02 14:00:58 | INFO     | PredictionModel      |   Époque  10/100 | Train=-1.6454 | Val=-2.1046 | Patience=1/15
+2026-04-02 14:01:11 | INFO     | PredictionModel      |   Époque  20/100 | Train=-2.1700 | Val=-2.5946 | Patience=3/15
+2026-04-02 14:01:26 | INFO     | PredictionModel      |   Époque  30/100 | Train=-2.5582 | Val=-2.9358 | Patience=2/15
+2026-04-02 14:01:40 | INFO     | PredictionModel      |   Époque  40/100 | Train=-2.5662 | Val=-2.5240 | Patience=5/15
+2026-04-02 14:01:53 | INFO     | PredictionModel      |   Époque  50/100 | Train=-2.6298 | Val=-3.3496 | Patience=0/15
+2026-04-02 14:02:07 | INFO     | PredictionModel      |   Époque  60/100 | Train=-2.9596 | Val=-3.3710 | Patience=0/15
+2026-04-02 14:02:21 | INFO     | PredictionModel      |   Époque  70/100 | Train=-3.0439 | Val=-3.3321 | Patience=1/15
+2026-04-02 14:02:34 | INFO     | PredictionModel      |   Époque  80/100 | Train=-2.9990 | Val=-3.4752 | Patience=1/15
+2026-04-02 14:02:48 | INFO     | PredictionModel      |   Époque  90/100 | Train=-3.1437 | Val=-3.4123 | Patience=11/15
+2026-04-02 14:02:54 | INFO     | PredictionModel      | Early stopping à l'époque 94 ✓
+2026-04-02 14:02:54 | INFO     | PredictionModel      | Meilleur modèle rechargé (val_loss=-3.5381) ✓
+2026-04-02 14:02:54 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 14:02:54 | INFO     | PredictionModel      | RÉSULTATS SUR DONNÉES DE TEST :
+2026-04-02 14:02:54 | INFO     | PredictionModel      |   Accuracy directionnelle : 41.4%
+2026-04-02 14:02:54 | INFO     | PredictionModel      |   MAE rendement           : 0.8853%
+2026-04-02 14:02:54 | INFO     | PredictionModel      |   Échantillons évalués    : 29
+2026-04-02 14:02:54 | INFO     | PredictionModel      | ─────────────────────────────────────────────
+2026-04-02 14:02:54 | INFO     | Main                 | Distribution des probabilités : min=0.44 | moy=0.49 | max=0.50 | BUY=0 | SELL=2 | HOLD=27
+2026-04-02 14:02:54 | INFO     | Backtester           | Démarrage du backtesting : AAPL
+2026-04-02 14:02:54 | INFO     | Backtester           | Période : 2025-12-01 → 2026-04-02
+2026-04-02 14:02:54 | INFO     | Backtester           | ============================================================
+2026-04-02 14:02:54 | INFO     | Backtester           | RAPPORT DE BACKTESTING : AAPL
+2026-04-02 14:02:54 | INFO     | Backtester           | ============================================================
+2026-04-02 14:02:54 | INFO     | Backtester           |   symbol                : AAPL
+2026-04-02 14:02:54 | INFO     | Backtester           |   période               : 2025-12-01 → 2026-04-02
+2026-04-02 14:02:54 | INFO     | Backtester           |   capital_initial       : 100,000$
+2026-04-02 14:02:54 | INFO     | Backtester           |   capital_final         : 100,000$
+2026-04-02 14:02:54 | INFO     | Backtester           |   rendement_total       : +0.0%
+2026-04-02 14:02:54 | INFO     | Backtester           |   sharpe_ratio          : 0.0
+2026-04-02 14:02:54 | INFO     | Backtester           |   sortino_ratio         : -50.0
+2026-04-02 14:02:54 | INFO     | Backtester           |   max_drawdown          : 0.0%
+2026-04-02 14:02:54 | INFO     | Backtester           |   volatilité            : 0.0%
+2026-04-02 14:02:54 | INFO     | Backtester           |   cagr                  : 0.0%
+2026-04-02 14:02:54 | INFO     | Backtester           |   total_trades          : 0
+2026-04-02 14:02:54 | INFO     | Backtester           |   win_rate              : 0.0%
+2026-04-02 14:02:54 | INFO     | Backtester           |   profit_factor         : 0.0
+2026-04-02 14:02:54 | INFO     | Backtester           |   benchmark             : +7.2%
+2026-04-02 14:02:54 | INFO     | Backtester           |   alpha                 : -7.2%
+2026-04-02 14:02:54 | INFO     | Backtester           | ============================================================
+2026-04-02 14:02:54 | INFO     | Backtester           |   CRITÈRES RÉUSSIS (1/4) :
+2026-04-02 14:02:54 | INFO     | Backtester           |     ✓ MaxDD ≥ -20% (0.0%)
+2026-04-02 14:02:54 | INFO     | Backtester           |     ✗ Sharpe ≥ 1.0 (0.00)
+2026-04-02 14:02:54 | INFO     | Backtester           |     ✗ Win Rate ≥ 50% (0.0%)
+2026-04-02 14:02:54 | INFO     | Backtester           |     ✗ Profit Factor ≥ 1.5 (0.00)
+2026-04-02 14:02:54 | INFO     | Backtester           | ============================================================
+2026-04-02 14:02:54 | INFO     | Backtester           | Résultats sauvegardés : ./results/AAPL_backtest.json

@@ -1,0 +1,134 @@
+2026-04-03 08:55:15 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-03 08:55:15 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-03 08:55:15 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-03 08:55:15 | INFO     | DataCollector        | Téléchargement de BTC-USD depuis Yahoo Finance...
+2026-04-03 08:55:15 | ERROR    | DataCollector        |   → BTC-USD : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-03 08:55:15 | INFO     | DataCollector        | Téléchargement de GC=F depuis Yahoo Finance...
+2026-04-03 08:55:15 | WARNING  | DataCollector        |   → GC=F : aucune donnée reçue (symbole invalide ?)
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Prétraitement de BTC-USD...
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     |   BTC-USD : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Prétraitement de GC=F...
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     |   GC=F : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-13 → 2026-04-03
+2026-04-03 08:55:15 | INFO     | DataPreprocessor     | Prétraitement terminé : 3 actifs traités
+2026-04-03 08:55:25 | INFO     | DataCollector        | DataCollector initialisé | Cache : data/cache
+2026-04-03 08:55:25 | INFO     | DataCollector        | Téléchargement de AAPL depuis Yahoo Finance...
+2026-04-03 08:55:25 | ERROR    | DataCollector        |   → AAPL : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-03 08:55:25 | INFO     | DataCollector        | Téléchargement de BTC-USD depuis Yahoo Finance...
+2026-04-03 08:55:25 | ERROR    | DataCollector        |   → BTC-USD : Erreur de téléchargement : Failed to perform, curl: (56) CONNECT tunnel failed, response 403. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-04-03 08:55:25 | INFO     | DataCollector        | Téléchargement de GC=F depuis Yahoo Finance...
+2026-04-03 08:55:25 | WARNING  | DataCollector        |   → GC=F : aucune donnée reçue (symbole invalide ?)
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Prétraitement de BTC-USD...
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     |   BTC-USD : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Prétraitement de GC=F...
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     |   GC=F : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-13 → 2026-04-03
+2026-04-03 08:55:25 | INFO     | DataPreprocessor     | Prétraitement terminé : 3 actifs traités
+2026-04-03 08:55:26 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-03 08:55:26 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-03 08:55:27 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-03 08:55:27 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-03 08:55:27 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-03 08:55:27 | INFO     | FeatureEngineer      | Ingénierie des features pour BTC-USD…
+2026-04-03 08:55:27 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-03 08:55:28 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-03 08:55:28 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-03 08:55:28 | INFO     | FeatureEngineer      |   BTC-USD : 50 features calculées sur 590 lignes ✓
+2026-04-03 08:55:28 | INFO     | FeatureEngineer      | Ingénierie des features pour GC=F…
+2026-04-03 08:55:28 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-03 08:55:29 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-03 08:55:29 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-03 08:55:29 | INFO     | FeatureEngineer      |   GC=F : 50 features calculées sur 590 lignes ✓
+2026-04-03 08:55:29 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   35.6%      -0.080%        20.3%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   30.5%      +0.322%        19.9%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    2.7%      +0.388%         0.0%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   31.2%      -0.262%        22.3%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   35.6%      -0.194%        62.5%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   31.2%      -0.754%        68.6%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    2.7%      +1.246%         0.0%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   30.5%      +1.043%        61.2%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   35.6%      -0.050%        10.9%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   30.5%      +0.166%        10.7%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    2.7%      +0.202%         0.0%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   31.2%      -0.148%        12.0%
+2026-04-03 08:55:30 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:55:30 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-03 08:55:43 | INFO     | PredictionModel      | Début de l'entraînement (50 époques max)…
+2026-04-03 08:55:43 | INFO     | PredictionModel      | Paramètres : 1,031,650
+2026-04-03 08:55:48 | INFO     | PredictionModel      |   Époque   1/50 | Train=0.7984 | Val=0.0000 | Patience=0/15
+2026-04-03 08:56:00 | INFO     | PredictionModel      |   Époque  10/50 | Train=-1.5185 | Val=0.0000 | Patience=9/15
+2026-04-03 08:56:07 | INFO     | PredictionModel      | Early stopping à l'époque 16 ✓
+2026-04-03 08:56:07 | INFO     | PredictionModel      | Meilleur modèle rechargé (val_loss=0.0000) ✓
+2026-04-03 08:56:07 | INFO     | PredictionModel      | Entraînement sur : cpu
+2026-04-03 08:56:07 | INFO     | PredictionModel      | Début de l'entraînement (50 époques max)…
+2026-04-03 08:56:07 | INFO     | PredictionModel      | Paramètres : 1,031,650
+2026-04-03 08:56:09 | INFO     | PredictionModel      |   Époque   1/50 | Train=2.2324 | Val=0.0000 | Patience=0/15
+2026-04-03 08:56:20 | INFO     | PredictionModel      |   Époque  10/50 | Train=-1.2594 | Val=0.0000 | Patience=9/15
+2026-04-03 08:56:35 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-03 08:56:35 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-03 08:56:35 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:56:35 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-13 → 2026-04-03
+2026-04-03 08:56:35 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-03 08:56:35 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-03 08:56:35 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-03 08:56:36 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-03 08:56:36 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-03 08:56:36 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:56:36 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   35.6%      -0.080%        20.3%
+2026-04-03 08:56:36 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   30.5%      +0.322%        19.9%
+2026-04-03 08:56:36 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    2.7%      +0.388%         0.0%
+2026-04-03 08:56:36 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   31.2%      -0.262%        22.3%
+2026-04-03 08:56:36 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:56:56 | INFO     | DataPreprocessor     | Démarrage du prétraitement des données...
+2026-04-03 08:56:56 | INFO     | DataPreprocessor     | Prétraitement de AAPL...
+2026-04-03 08:56:56 | INFO     | DataPreprocessor     |   AAPL : prétraitement terminé (800 lignes) ✓
+2026-04-03 08:56:56 | INFO     | DataPreprocessor     | Alignement des dates : 2023-03-13 → 2026-04-03
+2026-04-03 08:56:56 | INFO     | DataPreprocessor     | Prétraitement terminé : 1 actifs traités
+2026-04-03 08:56:56 | INFO     | FeatureEngineer      | Ingénierie des features pour AAPL…
+2026-04-03 08:56:56 | DEBUG    | TechnicalFeatures    | Indicateurs techniques calculés : 26 colonnes
+2026-04-03 08:56:57 | DEBUG    | StatisticalFeatures  | Features statistiques calculées : 45 colonnes
+2026-04-03 08:56:58 | DEBUG    | MicrostructureFeatures | Features microstructure calculées : 56 colonnes
+2026-04-03 08:56:58 | INFO     | FeatureEngineer      |   AAPL : 50 features calculées sur 590 lignes ✓
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | Entraînement du détecteur de régimes (4 régimes)…
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | Modèle HMM (Gaussian) entraîné ✓
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | RÉGIMES APPRIS PAR LE MODÈLE :
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | Régime           % Temps  Rendement/j   Volatilité
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────
+2026-04-03 08:56:58 | INFO     | RegimeDetector       |   Régime 0 (BULL    )   35.6%      -0.080%        20.3%
+2026-04-03 08:56:58 | INFO     | RegimeDetector       |   Régime 1 (BEAR    )   30.5%      +0.322%        19.9%
+2026-04-03 08:56:58 | INFO     | RegimeDetector       |   Régime 2 (RANGE   )    2.7%      +0.388%         0.0%
+2026-04-03 08:56:58 | INFO     | RegimeDetector       |   Régime 3 (HIGH_VOL)   31.2%      -0.262%        22.3%
+2026-04-03 08:56:58 | INFO     | RegimeDetector       | ───────────────────────────────────────────────────────

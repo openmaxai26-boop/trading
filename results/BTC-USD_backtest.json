@@ -1,0 +1,17 @@
+{
+  "symbol": "BTC-USD",
+  "période": "2025-12-02 → 2026-04-03",
+  "capital_initial": "100,000$",
+  "capital_final": "102,128$",
+  "rendement_total": "+2.1%",
+  "sharpe_ratio": 0.34,
+  "sortino_ratio": 0.27,
+  "max_drawdown": "-1.2%",
+  "volatilité": "3.2%",
+  "cagr": "6.1%",
+  "total_trades": 3,
+  "win_rate": "66.7%",
+  "profit_factor": 4.37,
+  "benchmark": "+33.3%",
+  "alpha": "-31.1%"
+}

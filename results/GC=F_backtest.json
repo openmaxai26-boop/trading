@@ -1,0 +1,17 @@
+{
+  "symbol": "GC=F",
+  "période": "2025-12-02 → 2026-04-03",
+  "capital_initial": "100,000$",
+  "capital_final": "100,208$",
+  "rendement_total": "+0.2%",
+  "sharpe_ratio": -8.06,
+  "sortino_ratio": -6.34,
+  "max_drawdown": "-0.3%",
+  "volatilité": "0.5%",
+  "cagr": "0.6%",
+  "total_trades": 1,
+  "win_rate": "100.0%",
+  "profit_factor": 212552827.4,
+  "benchmark": "+3.7%",
+  "alpha": "-3.5%"
+}

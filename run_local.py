@@ -258,10 +258,13 @@ def main():
         print(f"\n  [{symbol}] {RL_TIMESTEPS:,} timesteps...")
         df = features_data[symbol]
         try:
-            env = TradingEnvironment(df, config)
-            agent = RLAgent(env, config)
+            feat_cols_rl = feat_cols_per_symbol.get(symbol, fe.get_feature_columns(df))
+            df_rl = df[feat_cols_rl].copy()
+            prices_rl = df["close"]
+            env = TradingEnvironment(df_rl, prices_rl, config)
+            agent = RLAgent(config)
             t0 = time.time()
-            agent.train(total_timesteps=RL_TIMESTEPS)
+            agent.train(env, total_timesteps=RL_TIMESTEPS)
             elapsed = time.time() - t0
             agent.save(f"models/{symbol}_rl_agent")
             rl_agents[symbol] = agent
@@ -317,9 +320,9 @@ def main():
             print(f"  Rendement total  : {result.total_return * 100:+.2f}%")
             print(f"  Sharpe ratio     : {result.sharpe_ratio:.3f}")
             print(f"  Max drawdown     : {result.max_drawdown * 100:.2f}%")
-            print(f"  Trades           : {result.n_trades}")
-            if result.n_trades > 0:
-                print(f"  Win rate         : {result.win_rate * 100:.1f}%")
+            print(f"  Trades           : {result.total_trades}")
+            if result.total_trades > 0:
+                print(f"  Win rate         : {result.win_rate:.1f}%")
         except Exception as e:
             print(f"  ERREUR backtest : {e}")
 
@@ -335,9 +338,14 @@ def main():
     portfolio_results = {}
     portfolio_df = {s: features_data[s] for s in features_data}
 
+    # Construire un DataFrame de prix de clôture (une colonne par actif)
+    prices_portfolio = pd.DataFrame({
+        sym: features_data[sym]["close"] for sym in features_data
+    })
+
     for method in ["max_sharpe", "min_volatility", "risk_parity"]:
         try:
-            weights = pm.optimize(portfolio_df, method=method)
+            weights = pm.optimize(prices_portfolio, method=method)
             portfolio_results[method] = weights
             label = method.upper().replace("_", " ")
             print(f"\n  [{label}]")
@@ -455,8 +463,8 @@ def main():
             ret  = f"{res.total_return * 100:+.2f}%"
             sh   = f"{res.sharpe_ratio:.3f}"
             dd   = f"{res.max_drawdown * 100:.2f}%"
-            tr   = str(res.n_trades)
-            wr   = f"{res.win_rate * 100:.1f}%" if res.n_trades > 0 else "N/A"
+            tr   = str(res.total_trades)
+            wr   = f"{res.win_rate:.1f}%" if res.total_trades > 0 else "N/A"
             print(f"{sym:12s} {ret:>12s} {sh:>8s} {dd:>10s} {tr:>8s} {wr:>8s}")
     else:
         print("  Aucun résultat de backtest disponible.")
@@ -500,16 +508,17 @@ def _generate_synthetic_ohlcv(symbol: str, n_days: int = 800) -> "pd.DataFrame":
     start_price, drift, vol = params.get(symbol, (100.0, 0.00025, 0.015))
 
     rng   = np.random.default_rng(42)
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n_days)
-    rets  = rng.normal(drift, vol, n_days)
+    dates = pd.bdate_range(end="today", periods=n_days)
+    n     = len(dates)  # peut différer de n_days si aujourd'hui est un week-end
+    rets  = rng.normal(drift, vol, n)
     close = start_price * np.exp(np.cumsum(rets))
 
-    noise  = np.abs(rng.normal(0, vol * 0.4, n_days))
+    noise  = np.abs(rng.normal(0, vol * 0.4, n))
     high   = close * (1 + noise)
     low    = close * (1 - noise)
     open_  = np.roll(close, 1)
     open_[0] = close[0]
-    volume = np.abs(rng.normal(5_000_000, 1_500_000, n_days)).astype(int)
+    volume = np.abs(rng.normal(5_000_000, 1_500_000, n)).astype(int)
 
     return pd.DataFrame(
         {"open": open_, "high": high, "low": low, "close": close, "volume": volume},
